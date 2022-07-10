@@ -13,7 +13,6 @@ from app import models
 from alembic import command
 
 
-# SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:password123@localhost:5432/fastapi_test'
 SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}_test'
 
 
@@ -49,7 +48,7 @@ def client(session):
 
 @pytest.fixture
 def test_user2(client):
-    user_data = {"email": "sanjeev123@gmail.com",
+    user_data = {"email": "abdishakur101@gmail.com",
                  "password": "password123"}
     res = client.post("/users/", json=user_data)
 
@@ -62,7 +61,7 @@ def test_user2(client):
 
 @pytest.fixture
 def test_user(client):
-    user_data = {"email": "sanjeev@gmail.com",
+    user_data = {"email": "abdi10202@gmail.com",
                  "password": "password123"}
     res = client.post("/users/", json=user_data)
 
