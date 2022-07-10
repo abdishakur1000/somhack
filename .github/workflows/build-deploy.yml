@@ -44,7 +44,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: test with pytest
         run: |
-          pip install pytest=6.2.5
+          pip install -U pytest
           python -m pytest test/01_connect_to_neo4j__test.py
           pytest
           
