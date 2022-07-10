@@ -11,6 +11,9 @@ from app.database import Base
 from app.oauth2 import create_access_token
 from app import models
 from alembic import command
+import sys
+
+sys.dont_write_bytecode = True
 
 
 # SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:password123@localhost:5432/fastapi_test'
